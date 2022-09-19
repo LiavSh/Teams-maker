@@ -1,0 +1,17 @@
+.button {
+  color: white;
+  margin: 0 2%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  border: none;
+  font-family: 'Orbitron', sans-serif;
+  background: none;
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  color: rgb(123, 123, 123);
+}
+

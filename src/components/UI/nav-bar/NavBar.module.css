@@ -1,0 +1,23 @@
+.navBarPad{
+padding: 1.5%;
+
+}
+
+.screenPos {
+  text-align: right;
+  display: inline;
+  position: absolute;
+  width: 100%;
+  right: 0;
+
+
+}
+
+.logoStyle {
+  padding: 0.1%;
+  width: 3%;
+  height: 3%;
+  background-color: white;
+  display: inline;  
+
+}

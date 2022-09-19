@@ -1,0 +1,11 @@
+.header {
+color: blue;
+position: absolute;
+
+font-size: 20px;
+color: white;
+
+bottom: 3%;
+
+left: 8%;
+}
