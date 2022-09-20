@@ -14,9 +14,7 @@ function PlayerForm(props) {
     setPlayerRank(event.target.value);
   }
 
-  function addPlayer(event) {
-    event.preventDefault();
-
+  function addPlayer() {
     props.userData({
       name: player,
       rank: playerRank,
@@ -27,15 +25,14 @@ function PlayerForm(props) {
   }
 
   return (
-    <form className={classes.form} onSubmit={addPlayer}>
-      <p className={classes.form_header}>Add New Player</p>
+    <div className={classes.form}>
       <input
         onChange={nameChangeHandler}
         value={player}
         placeholder="Player Name"
         type="text"
         className={classes.formInput}
-      ></input>
+      />
       <input
         onChange={rankChangeHandler}
         value={playerRank}
@@ -45,9 +42,11 @@ function PlayerForm(props) {
         min="0"
         step="0.5"
         className={classes.formInput}
-      ></input>
-      <UserButton type="submit" buttonText={"Add"} />
-    </form>
+      />
+      <div className={classes.buttonBlock} onClick={addPlayer}>
+        <UserButton buttonText={"Add"} />
+      </div>
+    </div>
   );
 }
 

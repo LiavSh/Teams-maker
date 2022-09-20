@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./PlayerItem.module.css"
-import trash from "/Users/liavshitrit/Documents/web-dev/teams-maker/src/components/UI/Icons/trash.png"
+import trash from "/Users/liavshitrit/Documents/web-dev/Teams-maker/src/components/UI/Icons/trash.png"
 // %%%%%%%%%%%%%%%%%%%%%%%
 // %%%%%%%%%%%%%%%%%%%%%%%
 // TODO: Need to fix path

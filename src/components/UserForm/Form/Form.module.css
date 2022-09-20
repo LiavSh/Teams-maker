@@ -1,9 +1,21 @@
 .formBackground {
     background-color: rgb(34, 34, 34);
     padding: 4% 0;
+    text-align: center;
+
 }
 
 .formSelectors {
     display: inline-block;
-    
 }
+
+.formHeader {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 30px;
+    color: white;
+}
+
+.sections {
+    margin:0 0 8% 0;
+}
+

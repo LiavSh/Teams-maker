@@ -11,3 +11,12 @@
     color: rgb(255, 255, 255);
     background-color:rgb(4, 87, 87);
 }
+
+.TeamsCardStyle {
+    background-color: rgb(5, 109, 109);
+    color: rgb(228, 228, 228);
+    width: 50%;
+    border-style: groove;
+    margin: 1% auto;
+    transition-duration: 0.1s;
+}

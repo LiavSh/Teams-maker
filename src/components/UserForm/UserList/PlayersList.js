@@ -1,5 +1,5 @@
 import React from "react";
-import PlayerCard from "./PlayerCard";
+import Card from "./Card";
 import PlayerItem from "./PlayerItem";
 // import classes from "./PlayersList.module.css"
 
@@ -9,12 +9,13 @@ function PlayerList(props) {
     props.rmPlayer(data);
   };
 
+
   return (
     <div>
       {props.list.map((player, index) => (
-        <PlayerCard key={player.id}>
+        <Card cardDesign={"PlayerCardStyle"} key={player.id}>
           <PlayerItem playerNumber={removePlayer} id={index} name={player.name} rank={player.rank} />
-        </PlayerCard>
+        </Card>
       ))}
     </div>
   );

@@ -1,7 +1,5 @@
 .counterBlock {
   text-align:center;
-  display: inline-block;
-  width: 50%;
 }
 
 .counterBlock__bar {
@@ -10,8 +8,6 @@
   font-family: 'Orbitron', sans-serif;
   font-size: 40px;
   margin: 2% 2%;
-
-
 }
 
 .counterBlock__headline {
