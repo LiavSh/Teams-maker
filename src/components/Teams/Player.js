@@ -6,7 +6,9 @@ import star from "../UI/Icons/star.png";
 function Player(props) {
   function teamsAverage() {
     let sum = 0;
-    props.team.map((player) => (sum += player.rank));
+    for (let i = 0; i < props.team.length; i++) {
+      sum += parseInt(props.team[i].rank);
+    };
     return (sum / props.team.length).toFixed(2);
   }
 

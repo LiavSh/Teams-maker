@@ -48,7 +48,7 @@ function PlayerForm(props) {
         type="number"
         max="10"
         min="0"
-        step="0.5"
+        step="1"
         className={classes.formInput}
       />
       <div className={classes.buttonBlock} onClick={addPlayer}>
