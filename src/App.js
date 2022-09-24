@@ -1,14 +1,25 @@
-import "./App.css";
+import React, { useState} from "react";
+import classes from "./App.module.css";
+import Footer from "./components/footer/Footer";
+import Teams from "./components/Teams/Teams";
 import FrontPage from "./components/UI/main-page/FrontPage";
 import NavBar from "./components/UI/nav-bar/NavBar";
 import Form from "./components/UserForm/Form/Form";
 
 function App() {
+  const [equaldTeams, setEqualdTeams] = useState([]);
+
+  function evenTeams(teams) {
+    setEqualdTeams(teams);
+  }
+
   return (
-    <div>
+    <div className={classes.App}>
       <NavBar />
       <FrontPage />
-      <Form />
+      <Form playersTeams={evenTeams} />
+      <Teams teamsList={equaldTeams}/>
+      <Footer/>
     </div>
   );
 }

@@ -1,0 +1,29 @@
+.player {
+    display: inline-block;
+    margin: 2% 4%;
+}
+
+.gradeIcon {
+    display: inline-block;
+    width: 18%;
+}
+
+.gradeLabel {
+    display: inline-block;
+    margin-right : 10%;
+}
+
+.teamHeader {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 46px;
+}
+
+.teamFooter {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 25px;
+}
+
+.playersCard {
+    text-align: center;
+    color: white;
+}

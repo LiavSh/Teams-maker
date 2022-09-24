@@ -5,6 +5,8 @@ import PlayerForm from "./PlayersForm.js";
 import Counter from "./Counter.js";
 import UserButton from "../../UI/main-page/UserButton";
 
+const MAXTEAMS = 4;
+
 const playersArray = [
   { name: "Leo", rank: 4, id: 0.34423 },
   { name: "Danny", rank: 8, id: 0.35123 },
@@ -24,10 +26,12 @@ const playersArray = [
   { name: "Benwer", rank: 17, id: 0.252336 },
   { name: "Davwerid", rank: 18, id: 0.6662466499 },
   { name: "Josdgseph", rank: 19, id: 0.9953784 },
-  { name: "David23", rank: 20, id: 0.6664999999 },
+  { name: "David2hh3", rank: 20, id: 0.6664999999 },
+  { name: "David2df3", rank: 20, id: 0.66919999 },
+  { name: "David22223", rank: 24, id: 0.69676999 },
 ];
 
-function Form() {
+function Form(props) {
   let temp;
   const [players, setPlayers] = useState(playersArray);
   const [teamsNumber, setTeamsNumber] = useState();
@@ -54,36 +58,48 @@ function Form() {
   }
 
   function createTeams() {
-    let sortedPlayers = [...players];
-    sortedPlayers.sort(function (a, b) {
-      return b.rank - a.rank;
-    });
+    if (teamsNumber > 0) {
+      let sortedPlayers = [...players];
+      sortedPlayers.sort(function (a, b) {
+        return b.rank - a.rank;
+      });
 
-    for (let i = teamsNumber; i < sortedPlayers.length; i += teamsNumber * 2) {
-      if (i + teamsNumber - 1 < sortedPlayers.length) {
-        temp = sortedPlayers[i];
-        sortedPlayers[i] = sortedPlayers[i + teamsNumber - 1];
-        sortedPlayers[i + teamsNumber - 1] = temp;
+      for (
+        let i = teamsNumber;
+        i < sortedPlayers.length;
+        i += teamsNumber * 2
+      ) {
+        if (i + teamsNumber - 1 < sortedPlayers.length) {
+          temp = sortedPlayers[i];
+          sortedPlayers[i] = sortedPlayers[i + teamsNumber - 1];
+          sortedPlayers[i + teamsNumber - 1] = temp;
+        }
       }
+
+      const listOfTeams = [];
+
+      for (let i = 0; i < teamsNumber; i++) {
+        listOfTeams.push([]);
+      }
+
+      for (let i = 0; i < sortedPlayers.length; i++) {
+        listOfTeams[i % teamsNumber].push(sortedPlayers[i]);
+      }
+
+      props.playersTeams(listOfTeams);
     }
-
-    const teams = []
-
-    for (let i = 0; i < teamsNumber; i++) {
-      teams.push([]);
-    };
-
-    for (let i = 0; i < sortedPlayers.length; i++) {
-      teams[i % teamsNumber].push(sortedPlayers[i]);
-    };
-  };
+  }
 
   return (
     <div>
       <div className={classes.formBackground}>
         <div className={classes.sections}>
           <p className={classes.formHeader}>Select number of teams</p>
-          <Counter className={classes.counter} amount={numOfTeams} />
+          <Counter
+            className={classes.counter}
+            teamsCounter={numOfTeams}
+            max={MAXTEAMS}
+          />
         </div>
         <div className={classes.sections}>
           <p className={classes.formHeader}>Enter players</p>
