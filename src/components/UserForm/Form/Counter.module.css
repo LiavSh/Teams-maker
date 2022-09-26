@@ -1,19 +1,18 @@
 .counterBlock {
-  text-align:center;
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
 }
 
 .counterBlock__bar {
   display: inline-block;
   color: white;
-  font-family: 'Orbitron', sans-serif;
   font-size: 40px;
   margin: 2% 2%;
 }
 
 .counterBlock__headline {
-  font-family: 'Orbitron', sans-serif;
   font-size: 35px;
-  color:white;
+  color: white;
   margin: 3.5% 0;
 }
 
@@ -22,9 +21,6 @@
   background-color: white;
   width: 80px;
   height: 80px;
-  /* text-align: center; */
-  /* text-decoration: none; */
-  display: inline-block;
   font-size: 50px;
   transition-duration: 0.4s;
   border: 2px solid rgb(34, 34, 34);
@@ -34,5 +30,4 @@
   color: rgb(255, 255, 255);
   background-color: rgb(34, 34, 34);
   border: 2px solid rgb(255, 255, 255);
-
 }

@@ -2,8 +2,8 @@ import React, { useState} from "react";
 import classes from "./App.module.css";
 import Footer from "./components/footer/Footer";
 import Teams from "./components/Teams/Teams";
-import FrontPage from "./components/UI/main-page/FrontPage";
-import NavBar from "./components/UI/nav-bar/NavBar";
+import FrontPage from "./components/nav/main-page/FrontPage";
+import NavBar from "./components/nav/nav-bar/NavBar";
 import Form from "./components/UserForm/Form/Form";
 
 function App() {

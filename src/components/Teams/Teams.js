@@ -8,9 +8,9 @@ function Teams(props) {
     <div className={classes.background}>
       <div className={classes.cardSettings}>
         {props.teamsList.map((players, index) => (
-            <Card cardDesign={"TeamsCardStyle"} key={index}>
-              <Player team={players} teamsNum={index} />
-            </Card>
+          <Card cardDesign={"TeamsCardStyle"} key={index}>
+            <Player team={players} teamsNum={index} />
+          </Card>
         ))}
       </div>
     </div>

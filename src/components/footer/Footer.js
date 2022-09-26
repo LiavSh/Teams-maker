@@ -12,10 +12,8 @@ function Footer(){
   return (<div className={classes.footerDesign}>
     <div>
     <img className={classes.ball}  src={baseball} alt="baseball IMG"/>
-
     <img className={classes.ball}  src={basketball} alt="basketball IMG"/>
     <img className={classes.ball}  src={football} alt="football IMG"/>
-
     <img className={classes.ball} src={americanFootball} alt="american Football IMG"/>
     <img className={classes.ball}  src={tennis} alt="tennis IMG"/>
     <img className={classes.ball}  src={volleyball} alt="volleyball IMG"/>
@@ -28,4 +26,3 @@ function Footer(){
 };
 
 export default Footer;
-

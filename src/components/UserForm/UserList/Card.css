@@ -1,21 +1,21 @@
 .PlayerCardStyle {
-    background-color: rgb(4, 67, 67);
-    color: rgb(228, 228, 228);
-    width: 50%;
-    border-style: groove;
-    margin: 1% auto;
-    transition-duration: 0.1s;
+  background-color: rgb(4, 67, 67);
+  color: rgb(228, 228, 228);
+  width: 50%;
+  border-style: groove;
+  margin: 1% auto;
+  transition-duration: 0.1s;
 }
 
 .PlayerCardStyle:hover {
-    color: rgb(255, 255, 255);
-    background-color:rgb(4, 87, 87);
+  color: rgb(255, 255, 255);
+  background-color: rgb(4, 87, 87);
 }
 
 .TeamsCardStyle {
-    background-color: rgb(0, 42, 37);
-    color: rgb(228, 228, 228);
-    width: 70%;
-    border-style: groove;
-    margin: 5% auto;
+  background-color: rgb(0, 42, 37);
+  color: rgb(228, 228, 228);
+  width: 70%;
+  border-style: groove;
+  margin: 5% auto;
 }

@@ -1,15 +1,15 @@
 .cardPad {
   padding: 1%;
-}
-.index {
   font-size: larger;
-  width: 5%;
   text-align: center;
+}
+
+.index {
+  width: 5%;
   display: inline-block;
 }
 
 .name {
-  font-size: larger;
   padding-left: 15%;
   width: 40%;
   text-align: left;
@@ -17,14 +17,11 @@
 }
 
 .rank {
-  font-size: large;
   width: 30%;
   text-align: left;
   display: inline-block;
 }
 
 .trash {
-  text-align: center;
-  height: 2%;
   width: 2%;
 }

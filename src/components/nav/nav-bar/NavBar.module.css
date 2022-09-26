@@ -1,6 +1,5 @@
-.navBarPad{
-padding: 1.5%;
-
+.navBarPad {
+  padding: 1.5%;
 }
 
 .screenPos {
@@ -9,13 +8,10 @@ padding: 1.5%;
   position: absolute;
   width: 100%;
   right: 0;
-
-
 }
 
 .logoStyle {
   padding: 0 2%;
   width: 3%;
-  display: inline;  
-
+  display: inline;
 }

@@ -1,10 +1,8 @@
-
 .button {
     color: rgb(50, 50, 50);
     background-color: rgb(255, 255, 255);
     display: inline-block;
     font-family: 'Orbitron', sans-serif;
-
     font-size: 30px;
     transition-duration: 0.4s;
     border: 2px solid rgb(50, 50, 50);
@@ -14,5 +12,4 @@
     color: rgb(255, 255, 255);
     background-color:rgb(43, 43, 43);
     border: 2px solid rgb(255, 255, 255);
-  
   }

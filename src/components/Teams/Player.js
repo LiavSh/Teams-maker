@@ -8,7 +8,7 @@ function Player(props) {
     let sum = 0;
     for (let i = 0; i < props.team.length; i++) {
       sum += parseInt(props.team[i].rank);
-    };
+    }
     return (sum / props.team.length).toFixed(2);
   }
 

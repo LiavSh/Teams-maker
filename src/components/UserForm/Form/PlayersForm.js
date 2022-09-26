@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import UserButton from "../../UI/main-page/UserButton";
+import UserButton from "../../nav/main-page/UserButton.js";
 import classes from "./PlayersForm.module.css";
 
-const MAXNAMELENGTH = 10;
+const MAX_NAME_LENGTH = 10;
 
 function PlayerForm(props) {
   const [player, setPlayer] = useState("");
   const [playerRank, setPlayerRank] = useState("");
 
   function nameChangeHandler(event) {
-    if(player.length < MAXNAMELENGTH){
-    setPlayer(event.target.value);
+    if (player.length < MAX_NAME_LENGTH) {
+      setPlayer(event.target.value);
     }
   }
 
@@ -19,17 +19,15 @@ function PlayerForm(props) {
   }
 
   function addPlayer() {
-    if(player && playerRank){
-    props.userData({
-      name: player,
-      rank: playerRank,
-      id: Math.random().toString(),
-    });
-    setPlayer("");
-    setPlayerRank("");
-  } else {
-    //popup?
-  }
+    if (player && playerRank) {
+      props.userData({
+        name: player,
+        rank: playerRank,
+        id: Math.random().toString(),
+      });
+      setPlayer("");
+      setPlayerRank("");
+    }
   }
 
   return (
