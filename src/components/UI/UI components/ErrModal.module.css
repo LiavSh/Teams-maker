@@ -1,0 +1,35 @@
+.background {
+  z-index: 10;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.655);
+  height: 100%;
+  width: 100%;
+}
+
+.card_center {
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 80vh;
+  font-family: "Orbitron", sans-serif;
+}
+
+.modal_header {
+  background-color: rgb(1, 66, 58);
+  font-size: xx-large;
+  margin: 0;
+  padding: 1.5% 0;
+}
+
+.main_contant {
+  font-size: x-large;
+  padding: 4.5% 0;
+}
+
+.button_position{
+    text-align: right;
+    right: 10px;
+    margin: 0 4% 4% 0;
+}

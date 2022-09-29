@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import classes from "./App.module.css";
 import Footer from "./components/footer/Footer";
 import Teams from "./components/Teams/Teams";
@@ -18,8 +18,8 @@ function App() {
       <NavBar />
       <FrontPage />
       <Form playersTeams={evenTeams} />
-      <Teams teamsList={equaldTeams}/>
-      <Footer/>
+      <Teams teamsList={equaldTeams} />
+      <Footer />
     </div>
   );
 }
