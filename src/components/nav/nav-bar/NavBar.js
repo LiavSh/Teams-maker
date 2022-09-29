@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "./Card";
+import Card from "./NavCard";
 import NavBarButton from "./NavBarButton";
 import classes from "./NavBar.module.css";
 import logo from "/Users/liavshitrit/Documents/web-dev/Teams-maker/src/components/UI/Icons/mainlogo.png";

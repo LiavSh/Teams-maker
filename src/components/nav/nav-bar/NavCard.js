@@ -1,5 +1,5 @@
 import React from "react";
-import "./Card.css";
+import "./NavCard.css";
 
 function Card(props) {
   const classes = props.className + " cardStyle";
