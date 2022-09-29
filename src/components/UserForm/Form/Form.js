@@ -30,11 +30,11 @@ function Form(props) {
       );
       return updatedPlayersList;
     });
-  };
+  }
 
   function numOfTeams(numberOfTeams) {
     setTeamsNumber(numberOfTeams);
-  };
+  }
 
   function createTeams() {
     console.log(teamsNumber);
@@ -54,7 +54,6 @@ function Form(props) {
         content: "Number of players must be greater then number of teams",
       });
     } else {
-
       let sortedPlayers = [...players];
       sortedPlayers.sort(function (a, b) {
         return b.rank - a.rank;

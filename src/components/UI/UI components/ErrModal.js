@@ -25,7 +25,11 @@ function ErrModal(props) {
   return (
     <div>
       {ReactDOM.createPortal(
-        <Backdrop onConfirm={props.onConfirm} header={props.header} content={props.content}/>,
+        <Backdrop
+          onConfirm={props.onConfirm}
+          header={props.header}
+          content={props.content}
+        />,
         document.getElementById("backdrop-root")
       )}
     </div>

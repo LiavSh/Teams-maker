@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import classes from "./Counter.module.css";
-import ErrModal from "../../UI/UI components/ErrModal.js"
+import ErrModal from "../../UI/UI components/ErrModal.js";
 
 function Counter(props) {
   const [counter, setCounter] = useState(0);
