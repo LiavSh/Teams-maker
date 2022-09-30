@@ -5,13 +5,13 @@ import PlayerForm from "./PlayersForm.js";
 import Counter from "./Counter.js";
 import UserButton from "../../nav/main-page/UserButton.js";
 import ErrModal from "../../UI/UI components/ErrModal";
+import { createTeams, teamsCreationCheck } from "../../utils/utils";
 
 const MAXTEAMS = 4;
 
 const playersArray = [];
 
 function Form(props) {
-  let temp;
   const [players, setPlayers] = useState(playersArray);
   const [teamsNumber, setTeamsNumber] = useState(0);
   const [err, setErr] = useState();
@@ -36,52 +36,12 @@ function Form(props) {
     setTeamsNumber(numberOfTeams);
   }
 
-  function createTeams() {
-    console.log(teamsNumber);
-    if (!teamsNumber) {
-      setErr({
-        header: "Somthing is missing...",
-        content: "Please select number of teams",
-      });
-    } else if (players.length < 1) {
-      setErr({
-        header: "Somthing is missing...",
-        content: "Please enter players",
-      });
-    } else if (players.length < teamsNumber) {
-      setErr({
-        header: "Somthing went wrong...",
-        content: "Number of players must be greater then number of teams",
-      });
+  function teamsCreation() {
+    const validationCheck = teamsCreationCheck(teamsNumber, players);
+    if (validationCheck) {
+      setErr(validationCheck);
     } else {
-      let sortedPlayers = [...players];
-      sortedPlayers.sort(function (a, b) {
-        return b.rank - a.rank;
-      });
-
-      for (
-        let i = teamsNumber;
-        i < sortedPlayers.length;
-        i += teamsNumber * 2
-      ) {
-        if (i + teamsNumber - 1 < sortedPlayers.length) {
-          temp = sortedPlayers[i];
-          sortedPlayers[i] = sortedPlayers[i + teamsNumber - 1];
-          sortedPlayers[i + teamsNumber - 1] = temp;
-        }
-      }
-
-      const listOfTeams = [];
-
-      for (let i = 0; i < teamsNumber; i++) {
-        listOfTeams.push([]);
-      }
-
-      for (let i = 0; i < sortedPlayers.length; i++) {
-        listOfTeams[i % teamsNumber].push(sortedPlayers[i]);
-      }
-
-      props.playersTeams(listOfTeams);
+      props.playersTeams(createTeams(teamsNumber, players));
     }
   }
 
@@ -110,7 +70,7 @@ function Form(props) {
           <PlayerForm userData={addPlayer} />
           <PlayerList rmPlayer={removePlayer} list={players} />
         </div>
-        <div onClick={createTeams}>
+        <div onClick={teamsCreation}>
           <UserButton buttonText={"Create Teams"} />
         </div>
       </div>

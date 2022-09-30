@@ -10,7 +10,7 @@ function Counter(props) {
     if (counter === 0) {
       setErr({
         header: "Notice!",
-        content: "The minimum number of teams is " + props.max,
+        content: "There must be a minimun of 1 team",
       });
     } else {
       props.teamsCounter(counter - 1);
